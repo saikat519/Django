@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}view TAB{% endblock %}
+{% block body %}
+
+<br/><br/>
+<div class="container">
+<table>
+<form method="post" enctype="multipart/form-data">
+
+ {% csrf_token %} 
+
+{{ form.as_table }}
+
+
+
+
+
+</table>
+<button type="submit" class="btn btn-primary">Post</button>
+
+</div>
+{% endblock %}

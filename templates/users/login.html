@@ -1,0 +1,41 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+
+{% block body %}
+<form method="POST">
+{% csrf_token %}
+
+
+
+<div class="container" id="login-container">
+
+<h1>Login</h1>
+</br>
+ <div id="text-box">
+  
+    <i class="fas fa-user"></i>
+    <input type="text" class="login-username" name="username" placeholder="Username">
+    
+  </div>
+  <div  id="text-box">
+    <i class="fas fa-lock"></i>
+    <input type="password" class="login-password" name="password" placeholder="Password">
+  </div>
+<div>
+
+<input type="submit" class="btn btn-success" id="login-btn" value="Log in">
+</div>
+</div>
+</form>
+
+{% endblock %}
+
+
+
+
+
+
